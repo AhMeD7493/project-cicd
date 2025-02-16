@@ -1,12 +1,12 @@
 pipline{
      agent any
      stages {
-     	stage('Setup Python Virtual ENV')
-     	{
+     	stage('Setup Python Virtual ENV'){
+     	   steps {
      	    sh '''
      	    chmod +x envsetup.sh
      	    ./envsetup
-     	    '''
+     	    '''}
      	}
      	stage('Setup Gunicorn')
      	    steps {
